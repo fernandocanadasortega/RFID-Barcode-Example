@@ -1,0 +1,10 @@
+{
+  "app_name": "Scanners test",
+  "settings": "Settings",
+  "find": "Find",
+  "language": "Language",
+  "select_language": "Select Language",
+  "cancel": "Cancel",
+  "english": "English",
+  "spanish": "Spanish"
+}

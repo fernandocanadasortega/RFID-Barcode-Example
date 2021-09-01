@@ -1,0 +1,6 @@
+[
+	{
+		"pkg": "barcode-plugin",
+		"classpath": "com.pruebas.plugins.barcode.BarcodePluginPlugin"
+	}
+]

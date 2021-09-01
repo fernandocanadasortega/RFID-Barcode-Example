@@ -1,0 +1,89 @@
+.ion-row-items {
+  margin-top: 20px;
+}
+
+.first-row {
+  margin-top: 10px;
+}
+
+.filters-header {
+  font-size: 14px;
+  padding-left: 10px;
+  color: var(--ion-color-medium);
+}
+
+.filters-data {
+  font-size: 16px;
+}
+
+.floating-label {
+  padding-top: 10px;
+}
+
+.error-msg {
+  color: var(--ion-color-danger);
+  font-size: 14px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  padding-left: 16px;
+  margin-top: 10px;
+}
+
+.time-div {
+  margin-right: 40px;
+}
+
+.mat-form-field {
+  border-bottom: 1px solid var(--ion-color-light_medium);
+  font-size: 16px;
+  color: var(--ion-color-dark);
+}
+
+:host ::ng-deep .mat-form-field div.mat-form-field-flex {
+  padding-left: 15px;
+
+  .mat-form-field-infix {
+    width: 130px;
+  }
+}
+
+:host ::ng-deep .mat-form-field div.mat-form-field-underline {
+  border-bottom: 1px solid var(--ion-color-light_medium);
+  visibility: hidden;
+}
+
+:host ::ng-deep .mat-form-field div.mat-form-field-wrapper {
+  padding-bottom: 0px;
+}
+
+ion-col {
+  padding-bottom: 0px;
+}
+
+ion-item {
+  border-bottom: 1px solid var(--ion-color-light_medium);
+  padding-left: 16px;
+  width: 100%;
+}
+
+mat-form-field {
+  width: 100%;
+  font-size: 16px;
+  color: var(--ion-color-dark);
+}
+
+app-filter-select {
+  width: 100% !important;
+}
+
+.mat-button {
+  background-color: transparent;
+  margin-right: 5px;
+}
+
+@media (max-width: 540px) {
+  ion-grid {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}

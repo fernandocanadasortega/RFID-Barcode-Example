@@ -1,0 +1,16 @@
+<!-- Componente de cabecera -->
+<app-header [headerText]="'settings'" [headerBackButton]="'/login'"></app-header>
+
+<ion-content>
+  <ion-grid fixed>
+    <ion-row>
+      <ion-col>
+        <!-- Desplegable de idiomas -->
+        <app-language-select [dropdownOptions]="languages" [filterParam]="languageParams" [placeholderText]="'language'"
+          (outputEmitter)="saveLanguage($event)" *ngIf="languages">
+        </app-language-select>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+

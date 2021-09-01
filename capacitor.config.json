@@ -1,0 +1,30 @@
+{
+  "appId": "com.inerttia.plugins",
+  "appName": "Prueba plugins",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "www",
+  "plugins": {
+    "SplashScreen": {
+      "launchAutoHide": false,
+      "launchDuration": 0,
+      "launchShowDuration": 0,
+      "backgroundColor": "#ffffff",
+      "splashImmersive": false
+    }
+  },
+  "cordova": {
+    "preferences": {
+      "ScrollEnabled": "false",
+      "BackupWebStorage": "none",
+      "SplashMaintainAspectRatio": "true",
+      "FadeSplashScreenDuration": "300",
+      "SplashShowOnlyFirstTime": "false",
+      "SplashScreen": "screen",
+      "SplashScreenDelay": "3000"
+    }
+  },
+  "server": {
+    "cleartext": true
+  }
+}

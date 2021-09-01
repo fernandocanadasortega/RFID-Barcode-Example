@@ -1,0 +1,8 @@
+{
+  "name": "Calidad Renfe",
+  "integrations": {
+    "cordova": {},
+    "capacitor": {}
+  },
+  "type": "angular"
+}

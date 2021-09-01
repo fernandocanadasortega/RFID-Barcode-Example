@@ -1,0 +1,17 @@
+.icon-cursor {
+  cursor: pointer;
+}
+
+:host ::ng-deep .p-toggleable-content div.p-fieldset-content {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+ion-item {
+  width: 100%;
+}
+
+ion-label {
+  white-space: normal !important;
+  overflow: scroll !important;
+}

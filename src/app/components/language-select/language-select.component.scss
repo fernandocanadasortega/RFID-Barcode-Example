@@ -1,0 +1,11 @@
+@import '../../../theme/dropdown-select.scss';
+
+.mat-form-field {
+  width: 100% !important;
+  justify-content: center;
+  border-bottom: 1px solid var(--ion-color-light_medium);
+}
+
+:host ::ng-deep .mat-select-arrow {
+  margin-right: 16px;
+}

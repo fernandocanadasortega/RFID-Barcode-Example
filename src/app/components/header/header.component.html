@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar class="color-dark">
+
+    <ion-buttons slot="start">
+      <ion-back-button text="" [defaultHref]="headerBackButton" icon="return-up-back-outline" class="ion-padding-start"
+        *ngIf="headerBackButton">
+      </ion-back-button>
+
+      <ion-button *ngIf="leftButtonIcon" (click)="clickOnLeftButton()" color="light">
+        <ion-icon slot="icon-only" [name]="leftButtonIcon"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+    <ion-label class="title-text">
+      <span class="title-header">{{ 'app_name' | translate }}</span> <br />
+      <span class="title-body" *ngIf="headerText">{{ headerText | translate }}</span>
+    </ion-label>
+
+    <ion-buttons slot="end" *ngIf="rightButtonIcon">
+      <ion-button (click)="clickOnRightButton()">
+        <ion-icon slot="icon-only" [name]="rightButtonIcon"></ion-icon> <!-- ellipsis-vertical -->
+      </ion-button>
+    </ion-buttons>
+
+  </ion-toolbar>
+</ion-header>

@@ -1,0 +1,64 @@
+<app-header  [leftButtonIcon]="'settings'" [rightButtonIcon]="'trash'" (leftButtonClick)="settings()" (rightButtonClick)="deleteSavedScanners()"></app-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <app-filter-select [dropdownOptions]="pdaModel.avaibleScanners" [filterParam]="defaultScanner"
+          [placeholderText]="'Escáneres'" [dynamicValuesQuery]="'refresh'" (outputEmitter)="saveScanner($event)"
+          *ngIf="defaultScanner">
+        </app-filter-select>
+      </ion-col>
+    </ion-row>
+
+    <ion-row *ngIf="selectedScanner && selectedScanner['wearable']">
+      <ion-col>
+        <ion-item>
+          <ion-label>Wearable (Luz de escaner siempre activa)</ion-label>
+          <ion-checkbox color="primary" [checked]="wearable" (ionChange)="saveWearable($event['detail']['checked'])">
+          </ion-checkbox>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-button expand="block" (click)="scan()">Empezar scan</ion-button>
+      </ion-col>
+    </ion-row>
+
+    <ion-row class="ion-padding">
+      <ion-label>Datos del escaner seleccionado:</ion-label>
+    </ion-row>
+
+    <ion-row *ngIf="barcodeData.length > 0">
+      <ion-col>
+        <p-fieldset legend="Datos de código de barras" [toggleable]="true">
+          <ion-item *ngFor="let barcode of barcodeData; let row = index" [attr.data-index]="row">
+            <ion-label>{{ barcode }}</ion-label>
+          </ion-item>
+        </p-fieldset>
+      </ion-col>
+    </ion-row>
+
+    <ion-row *ngIf="zebraRfidData.length > 0">
+      <ion-col>
+        <p-fieldset legend="Datos de zebra RFID" [toggleable]="true">
+          <ion-item *ngFor="let zebraRfid of zebraRfidData; let row = index" [attr.data-index]="row">
+            <ion-label>{{ zebraRfid }}</ion-label>
+          </ion-item>
+        </p-fieldset>
+      </ion-col>
+    </ion-row>
+
+    <ion-row *ngIf="honeywellRfidData.length > 0">
+      <ion-col>
+        <p-fieldset legend="Datos de honeywell RFID" [toggleable]="true">
+          <ion-item *ngFor="let honeywellRfid of honeywellRfidData; let row = index" [attr.data-index]="row">
+            <ion-label>{{ honeywellRfid }}</ion-label>
+          </ion-item>
+        </p-fieldset>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

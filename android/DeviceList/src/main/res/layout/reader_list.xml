@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f8f8f8"
+    android:id="@+id/relativeLayout"
+    tools:context="com.uk.tsl.rfid.DeviceListActivity">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/reader_recycler_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <TextView
+        android:id="@+id/empty_list_view_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/reader_recycler_view"
+        app:layout_constraintStart_toStartOf="@+id/reader_recycler_view"
+        app:layout_constraintTop_toTopOf="@+id/reader_recycler_view"
+        android:text="@string/empty_list_view_message"
+        android:visibility="gone"/>
+
+    <ImageView
+        android:id="@+id/image_bluetooth"
+        android:layout_width="51dp"
+        android:layout_height="45dp"
+        android:layout_marginBottom="52dp"
+        android:contentDescription="@string/image_bluetooth"
+        android:src="@drawable/bt_off"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/empty_list_view_message"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.407"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/reader_recycler_view"
+        app:layout_constraintVertical_bias="0.991" />
+
+    <ImageView
+        android:id="@+id/image_reader"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:contentDescription="@string/image_reader"
+        android:src="@drawable/list_ih21_a1"
+        app:layout_constraintBottom_toTopOf="@+id/empty_list_view_message"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/image_bluetooth"
+        app:layout_constraintTop_toTopOf="@+id/reader_recycler_view"
+        app:layout_constraintVertical_bias="0.817"
+        android:visibility="gone"/>
+
+    <Button
+        android:id="@+id/settings_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="@string/settings"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/empty_list_view_message"
+        app:layout_constraintVertical_bias="0.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

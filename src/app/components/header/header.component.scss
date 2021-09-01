@@ -1,0 +1,29 @@
+.color-dark {
+  background: var(--ion-color-dark);
+  --background: var(--ion-color-dark);
+  color: var(--ion-color-light);
+  --color: var(--ion-color-light);
+}
+
+.title-text {
+  padding-left: 20px;
+  padding-right: 20px;
+  --padding-top: 0;
+  --padding-bottom: 0;
+  --padding-start: 0;
+  --padding-end: 0;
+  --min-height: 56px;
+
+  .title-header{
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 0.0125em;
+  }
+
+  .title-body {
+    padding-left: 22px;
+    padding-right: 22px;
+    font-size: 14px;
+    font-weight: 100;
+  }
+}

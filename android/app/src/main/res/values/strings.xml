@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Prueba plugins</string>
+    <string name="title_activity_main">Prueba plugins</string>
+    <string name="package_name">com.inerttia.plugins</string>
+    <string name="custom_url_scheme">com.inerttia.plugins</string>
+</resources>

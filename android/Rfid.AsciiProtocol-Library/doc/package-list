@@ -1,0 +1,8 @@
+com.uk.tsl.barcodeconfiguration
+com.uk.tsl.tid.asciiprotocol
+com.uk.tsl.tid.asciiprotocol.commands
+com.uk.tsl.tid.asciiprotocol.device
+com.uk.tsl.tid.asciiprotocol.enumerations
+com.uk.tsl.tid.asciiprotocol.parameters
+com.uk.tsl.tid.asciiprotocol.responders
+com.uk.tsl.utils

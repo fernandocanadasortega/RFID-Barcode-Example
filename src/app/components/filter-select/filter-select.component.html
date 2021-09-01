@@ -1,0 +1,14 @@
+<mat-form-field class="mat-form-field">
+  <!-- Input donde se muestra la opción elegida -->
+  <mat-select [formControl]="optionsCtrl" [placeholder]="placeholderText | translate" #singleSelect>
+    <!-- Buscador -->
+    <mat-option>
+      <ngx-mat-select-search [formControl]="optionsFilterCtrl" [placeholderLabel]="searchPlaceHolder"
+        [noEntriesFoundLabel]="'no_centers_found' | translate" [disableInitialFocus]="true"></ngx-mat-select-search>
+    </mat-option>
+
+    <!-- Lista entera de opciones -->
+    <mat-option *ngFor="let option of filteredOptions | async" [value]="option"
+      (onSelectionChange)="changeOption($event);">{{ option['nombre'] }}</mat-option>
+  </mat-select>
+</mat-form-field>
